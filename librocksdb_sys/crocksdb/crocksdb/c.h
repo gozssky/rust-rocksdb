@@ -1573,6 +1573,8 @@ extern C_ROCKSDB_LIBRARY_API void crocksdb_env_destroy(crocksdb_env_t*);
 
 extern C_ROCKSDB_LIBRARY_API crocksdb_envoptions_t*
 crocksdb_envoptions_create();
+extern C_ROCKSDB_LIBRARY_API void crocksdb_envoptions_set_use_direct_writes(
+    crocksdb_envoptions_t* opt, bool use_direct_writes);
 extern C_ROCKSDB_LIBRARY_API void crocksdb_envoptions_destroy(
     crocksdb_envoptions_t* opt);
 

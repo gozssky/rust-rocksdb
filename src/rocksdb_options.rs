@@ -2066,6 +2066,12 @@ impl EnvOptions {
             }
         }
     }
+
+    pub fn set_use_direct_writes(&mut self, use_direct_writes: bool) {
+        unsafe {
+            crocksdb_ffi::crocksdb_envoptions_set_use_direct_writes(self.inner, use_direct_writes);
+        }
+    }
 }
 
 impl Drop for EnvOptions {

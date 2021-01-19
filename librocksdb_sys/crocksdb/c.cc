@@ -3900,6 +3900,11 @@ crocksdb_envoptions_t* crocksdb_envoptions_create() {
   return opt;
 }
 
+void crocksdb_envoptions_set_use_direct_writes(crocksdb_envoptions_t* opt,
+                                               bool use_direct_writes) {
+  opt->rep.use_direct_writes = use_direct_writes;
+}
+
 void crocksdb_envoptions_destroy(crocksdb_envoptions_t* opt) { delete opt; }
 
 crocksdb_sequential_file_t* crocksdb_sequential_file_create(

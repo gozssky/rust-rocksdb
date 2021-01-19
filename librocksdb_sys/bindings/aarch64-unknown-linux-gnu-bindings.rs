@@ -2989,6 +2989,9 @@ extern "C" {
     pub fn crocksdb_envoptions_create() -> *mut crocksdb_envoptions_t;
 }
 extern "C" {
+    pub fn crocksdb_envoptions_set_use_direct_writes(opt: *mut crocksdb_envoptions_t, use_direct_writes:bool);
+}
+extern "C" {
     pub fn crocksdb_envoptions_destroy(opt: *mut crocksdb_envoptions_t);
 }
 extern "C" {

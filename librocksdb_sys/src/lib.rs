@@ -1591,6 +1591,7 @@ extern "C" {
 
     // EnvOptions
     pub fn crocksdb_envoptions_create() -> *mut EnvOptions;
+    pub fn crocksdb_envoptions_set_use_direct_writes(opt: *mut EnvOptions, use_direct_writes:bool);
     pub fn crocksdb_envoptions_destroy(opt: *mut EnvOptions);
 
     // SequentialFile
